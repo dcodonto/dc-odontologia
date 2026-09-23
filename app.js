@@ -3,7 +3,7 @@ const counters = document.querySelectorAll("[data-count]");
 const leadForm = document.querySelector("#leadForm");
 const leadList = document.querySelector("#leadList");
 const crmEmpty = document.querySelector(".crm-empty");
-const clinicWhatsApp = "5521999999999";
+const clinicWhatsApp = "5521998485107";
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
