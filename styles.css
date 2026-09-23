@@ -19,6 +19,8 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -26,6 +28,13 @@ body {
   background: var(--ivory);
   overflow-x: hidden;
   width: 100%;
+  max-width: 100%;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 img,
@@ -177,9 +186,9 @@ a {
 
 .hero-overlay {
   background:
-    radial-gradient(circle at 14% 42%, rgba(187, 167, 133, 0.22), transparent 33%),
-    linear-gradient(90deg, rgba(13, 40, 31, 0.58), rgba(13, 40, 31, 0.36) 44%, rgba(13, 40, 31, 0.2)),
-    linear-gradient(180deg, rgba(13, 40, 31, 0.08), rgba(13, 40, 31, 0.52));
+    radial-gradient(circle at 14% 42%, rgba(187, 167, 133, 0.12), transparent 34%),
+    linear-gradient(90deg, rgba(13, 40, 31, 0.34), rgba(13, 40, 31, 0.22) 46%, rgba(13, 40, 31, 0.12)),
+    linear-gradient(180deg, rgba(13, 40, 31, 0.04), rgba(13, 40, 31, 0.32));
 }
 
 .hero-content {
@@ -786,9 +795,19 @@ footer {
     font-size: 1.4rem;
   }
 
-  .hero-note,
-  .contact-rail {
+  .hero-note {
     display: none;
+  }
+
+  .contact-rail {
+    right: 12px;
+    gap: 9px;
+  }
+
+  .contact-rail a {
+    width: 46px;
+    height: 46px;
+    font-size: 0.9rem;
   }
 
   .section-grid,
@@ -822,7 +841,12 @@ footer {
   .hero {
     width: 100vw;
     max-width: 100vw;
+    min-width: 100vw;
+    left: 50%;
+    right: 50%;
     margin: 0;
+    margin-left: -50vw;
+    margin-right: -50vw;
     padding: 122px 22px 70px;
   }
 
