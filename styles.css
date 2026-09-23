@@ -455,17 +455,29 @@ section {
 }
 
 .doctor-back {
-  justify-content: center;
-  gap: 22px;
-  padding: 34px;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 28px;
   transform: rotateY(180deg);
   color: rgba(245, 241, 232, 0.82);
+  overflow-y: auto;
+}
+
+.doctor-bio {
+  display: grid;
+  gap: 10px;
 }
 
 .doctor-back p {
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.doctor-back .doctor-bio strong {
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: inherit;
 }
 
 .services {
