@@ -460,27 +460,111 @@ section {
   margin-top: 6px;
 }
 
-.team-card {
-  overflow: hidden;
-  border-radius: 34px;
-  background: var(--forest);
-  box-shadow: var(--shadow);
+.team-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
 }
 
-.team-card img {
+.doctor-card {
+  min-height: 560px;
+  border: 0;
+  background: transparent;
+  perspective: 1400px;
+  cursor: pointer;
+}
+
+.doctor-inner {
+  position: relative;
   width: 100%;
-  max-height: 680px;
-  object-fit: cover;
-  object-position: center top;
+  height: 100%;
+  min-height: inherit;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
 }
 
-.team-card div {
+.doctor-card:hover .doctor-inner,
+.doctor-card:focus-within .doctor-inner {
+  transform: rotateY(180deg);
+}
+
+.doctor-front,
+.doctor-back {
+  position: absolute;
+  inset: 0;
   display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 22px 26px;
-  color: var(--ivory);
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(245, 241, 232, 0.22);
+  border-radius: 34px;
+  background: linear-gradient(145deg, rgba(38, 68, 53, 0.96), rgba(9, 48, 35, 0.98));
+  box-shadow: var(--shadow);
+  backface-visibility: hidden;
+}
+
+.doctor-photo {
+  min-height: 380px;
+  background: rgba(245, 241, 232, 0.08);
+}
+
+.placeholder-photo {
+  display: grid;
+  place-items: center;
+  color: rgba(245, 241, 232, 0.68);
+  font-size: 0.78rem;
   font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.doctor-summary {
+  display: grid;
+  gap: 8px;
+  padding: 24px;
+  color: var(--ivory);
+}
+
+.doctor-summary p,
+.doctor-back h3 {
+  margin: 0;
+  color: var(--ivory);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  line-height: 0.95;
+}
+
+.doctor-summary strong,
+.doctor-back strong {
+  color: var(--gold-light);
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.card-arrow {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  margin-top: 8px;
+  border: 1px solid rgba(245, 241, 232, 0.32);
+  border-radius: 50%;
+  color: var(--ivory);
+  font-size: 1.4rem;
+}
+
+.doctor-back {
+  justify-content: center;
+  gap: 22px;
+  padding: 34px;
+  transform: rotateY(180deg);
+  color: rgba(245, 241, 232, 0.82);
+}
+
+.doctor-back p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
 .services {
@@ -887,9 +971,20 @@ footer {
 
   .hero-actions,
   footer,
-  .team-card div,
   .lead-form {
     flex-direction: column;
+  }
+
+  .team-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-card {
+    min-height: 520px;
+  }
+
+  .doctor-photo {
+    min-height: 330px;
   }
 
   .lead-form {
