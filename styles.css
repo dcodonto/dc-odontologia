@@ -175,9 +175,9 @@ a {
 
 .hero-overlay {
   background:
-    radial-gradient(circle at 14% 42%, rgba(187, 167, 133, 0.36), transparent 33%),
-    linear-gradient(90deg, rgba(13, 40, 31, 0.92), rgba(13, 40, 31, 0.68) 44%, rgba(13, 40, 31, 0.46)),
-    linear-gradient(180deg, rgba(13, 40, 31, 0.2), rgba(13, 40, 31, 0.88));
+    radial-gradient(circle at 14% 42%, rgba(187, 167, 133, 0.22), transparent 33%),
+    linear-gradient(90deg, rgba(13, 40, 31, 0.58), rgba(13, 40, 31, 0.36) 44%, rgba(13, 40, 31, 0.2)),
+    linear-gradient(180deg, rgba(13, 40, 31, 0.08), rgba(13, 40, 31, 0.52));
 }
 
 .hero-content {
