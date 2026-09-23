@@ -285,8 +285,13 @@ a {
   box-shadow: 0 14px 30px rgba(7, 30, 23, 0.25);
 }
 
+.contact-rail svg {
+  width: 54%;
+  height: 54%;
+  fill: currentColor;
+}
+
 .orange { background: #f1662d; }
-.blue { background: #2f9bd0; }
 .pink { background: #f64f74; }
 .champagne { background: var(--champagne); }
 .forest { background: var(--forest); }
