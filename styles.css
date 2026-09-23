@@ -562,7 +562,8 @@ section {
   display: flex;
   gap: 24px;
   width: max-content;
-  animation: slide 22s linear infinite;
+  will-change: transform;
+  animation: slide 28s linear infinite;
 }
 
 .result-track article {
@@ -773,7 +774,7 @@ footer {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-42%);
+    transform: translateX(calc(-50% - 12px));
   }
 }
 
