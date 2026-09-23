@@ -1,8 +1,6 @@
 const revealItems = document.querySelectorAll(".reveal");
 const counters = document.querySelectorAll("[data-count]");
 const leadForm = document.querySelector("#leadForm");
-const leadList = document.querySelector("#leadList");
-const crmEmpty = document.querySelector(".crm-empty");
 const clinicWhatsApp = "5521998485107";
 
 const revealObserver = new IntersectionObserver(
@@ -49,31 +47,6 @@ document.querySelector(".menu-toggle")?.addEventListener("click", () => {
   document.querySelector("#clinica")?.scrollIntoView({ behavior: "smooth" });
 });
 
-const getLeads = () => JSON.parse(localStorage.getItem("dcLeads") || "[]");
-
-const saveLead = (lead) => {
-  const leads = [lead, ...getLeads()].slice(0, 5);
-  localStorage.setItem("dcLeads", JSON.stringify(leads));
-  renderLeads();
-};
-
-const renderLeads = () => {
-  if (!leadList) return;
-  const leads = getLeads();
-  leadList.innerHTML = "";
-  crmEmpty?.toggleAttribute("hidden", leads.length > 0);
-
-  leads.forEach((lead) => {
-    const item = document.createElement("li");
-    item.innerHTML = `
-      <strong>${lead.name}</strong>
-      <span>${lead.interest} · ${lead.period}</span>
-      <span>${lead.phone}</span>
-    `;
-    leadList.appendChild(item);
-  });
-};
-
 leadForm?.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -85,8 +58,6 @@ leadForm?.addEventListener("submit", (event) => {
     period: String(formData.get("period") || "").trim(),
     source: "Site DC Odontologia",
   };
-
-  saveLead(lead);
 
   const message = [
     "Olá, vim pelo site da DC Odontologia e gostaria de agendar uma avaliação.",
@@ -100,5 +71,3 @@ leadForm?.addEventListener("submit", (event) => {
   window.open(`https://wa.me/${clinicWhatsApp}?text=${encodeURIComponent(message)}`, "_blank");
   leadForm.reset();
 });
-
-renderLeads();
