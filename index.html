@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DC Odontologia Especializada</title>
+    <meta
+      name="description"
+      content="Site institucional da DC Odontologia Especializada, com atendimento odontológico premium, equipe especializada e ambiente acolhedor."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23183c30'/%3E%3Cpath d='M16 43V18h11c8 0 14 5 14 12.5S35 43 27 43H16Zm7-6h4c4.7 0 7.4-2.4 7.4-6.5S31.7 24 27 24h-4v13Z' fill='%23f4f1e9'/%3E%3Cpath d='M36 18h12v6h-5v19h-7V18Z' fill='%23bba785'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <header class="site-header" id="topo">
+      <a class="brand" href="#inicio" aria-label="DC Odontologia Especializada">
+        <span class="brand-mark">DC</span>
+        <span class="brand-text">Odontologia Especializada</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Menu principal">
+        <a href="#clinica">A clínica</a>
+        <a href="#equipe">Equipe</a>
+        <div class="nav-dropdown">
+          <button type="button" aria-expanded="false">Serviços</button>
+          <div class="dropdown-panel">
+            <a href="#servicos">Implantes dentários</a>
+            <a href="#servicos">Clareamento dental</a>
+            <a href="#servicos">Periodontia</a>
+            <a href="#servicos">Dentística restauradora</a>
+            <a href="#servicos">Harmonização do sorriso</a>
+          </div>
+        </div>
+        <a href="#resultados">Resultados</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="header-cta" href="#contato">Agendar consulta</a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu">☰</button>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio" aria-label="Abertura do site">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="assets/consultorio-poster.jpg"
+        >
+          <source src="assets/consultorio.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">DC Odontologia Especializada</p>
+          <h1>O cuidado está <span>nos detalhes.</span></h1>
+          <p>
+            Um funil digital premium para transformar interesse em consulta, com experiência
+            visual de alto padrão e atendimento direcionado pelo WhatsApp.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#contato">Agende sua consulta</a>
+            <a class="secondary-button" href="#crm">Ver funil premium</a>
+          </div>
+        </div>
+        <div class="hero-note reveal from-right">
+          <strong>Alto padrão</strong>
+          <span>Ambiente acolhedor, equipe especializada e atendimento humanizado.</span>
+        </div>
+      </section>
+
+      <aside class="contact-rail" aria-label="Atalhos de contato">
+        <a href="#contato" title="Localização" class="orange">⌖</a>
+        <a href="#contato" title="Telefone" class="blue">☎</a>
+        <a href="#contato" title="WhatsApp" class="whatsapp">W</a>
+        <a href="#contato" title="E-mail" class="pink">✉</a>
+        <a href="#contato" title="Instagram" class="champagne">◎</a>
+        <a href="#topo" title="Voltar ao topo" class="forest">↑</a>
+      </aside>
+
+      <section class="intro section-grid" id="clinica">
+        <div class="collage reveal from-left">
+          <img src="assets/consultorio-poster.jpg" alt="Recepção da clínica DC Odontologia" />
+          <img src="assets/consultorio-2.jpg" alt="Detalhe do ambiente da clínica" />
+          <img src="assets/consultorio-17.jpg" alt="Entrada e estrutura da clínica" />
+        </div>
+        <div class="section-copy reveal from-right">
+          <p class="eyebrow">A clínica</p>
+          <h2>Odontologia premium com acolhimento real.</h2>
+          <p>
+            A DC Odontologia Especializada nasce com uma proposta clara: unir técnica,
+            conforto e uma experiência de atendimento pensada para quem valoriza cuidado
+            em cada etapa.
+          </p>
+          <p>
+            O site foi pensado para comunicar sofisticação sem exagero, com cores suaves,
+            navegação objetiva e detalhes visuais que aparecem conforme o visitante desce
+            a página.
+          </p>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="stat reveal">
+          <strong data-count="5">0</strong>
+          <span>Etapas no funil de atendimento</span>
+        </div>
+        <div class="stat reveal">
+          <strong data-count="24">0</strong>
+          <span>Horas de captação ativa pelo site</span>
+        </div>
+        <div class="stat reveal">
+          <strong data-count="100">0</strong>
+          <span>% foco em leads qualificados</span>
+        </div>
+      </section>
+
+      <section class="crm-preview section-grid" id="crm">
+        <div class="section-copy reveal from-left">
+          <p class="eyebrow">WhatsApp + CRM</p>
+          <h2>O site deixa de ser vitrine e vira captação.</h2>
+          <p>
+            Cada botão de agendamento conduz o paciente para uma mensagem personalizada no
+            WhatsApp, com nome, interesse e origem do contato. A clínica recebe uma conversa
+            mais organizada e pronta para continuar o atendimento.
+          </p>
+          <p>
+            A estrutura também fica preparada para conectar com CRM externo, como planilha,
+            RD Station, HubSpot, Kommo ou Pipedrive, quando o cliente definir a ferramenta.
+          </p>
+        </div>
+        <div class="pipeline-card reveal from-right" aria-label="Demonstração do funil de CRM">
+          <div class="pipeline-head">
+            <span>Pipeline DC</span>
+            <strong>Leads odontológicos</strong>
+          </div>
+          <div class="pipeline-step active">
+            <span>Novo lead</span>
+            <strong>Formulário do site</strong>
+          </div>
+          <div class="pipeline-step">
+            <span>WhatsApp</span>
+            <strong>Mensagem pronta enviada</strong>
+          </div>
+          <div class="pipeline-step">
+            <span>Triagem</span>
+            <strong>Interesse por tratamento</strong>
+          </div>
+          <div class="pipeline-step">
+            <span>Agenda</span>
+            <strong>Consulta de avaliação</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="team section-grid sage" id="equipe">
+        <div class="section-copy reveal from-left">
+          <p class="eyebrow">Equipe</p>
+          <h2>Profissionais que representam a identidade da clínica.</h2>
+          <p>
+            A apresentação da equipe valoriza os nomes das doutoras e preserva a paleta
+            visual enviada: verde sálvia, marfim e detalhes claros.
+          </p>
+        </div>
+        <div class="team-card reveal from-right">
+          <img src="assets/dc-equipe.jpg" alt="Dra. Maria Clara e Dra. Danielle Alves" />
+          <div>
+            <span>Dra. Maria Clara</span>
+            <span>Dra. Danielle Alves</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="servicos">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Serviços</p>
+          <h2>Tratamentos com apresentação interativa.</h2>
+        </div>
+        <div class="service-grid">
+          <article class="flip-card reveal from-left">
+            <div class="flip-inner">
+              <div class="flip-front">Implantes dentários</div>
+              <div class="flip-back">Planejamento para reabilitação oral com segurança e previsibilidade.</div>
+            </div>
+          </article>
+          <article class="flip-card reveal">
+            <div class="flip-inner">
+              <div class="flip-front">Clareamento dental</div>
+              <div class="flip-back">Cuidado estético para valorizar o sorriso com acompanhamento profissional.</div>
+            </div>
+          </article>
+          <article class="flip-card reveal from-right">
+            <div class="flip-inner">
+              <div class="flip-front">Periodontia</div>
+              <div class="flip-back">Atenção à saúde gengival e à base que sustenta um sorriso saudável.</div>
+            </div>
+          </article>
+          <article class="flip-card reveal from-left">
+            <div class="flip-inner">
+              <div class="flip-front">Dentística restauradora</div>
+              <div class="flip-back">Restaurações e ajustes estéticos com acabamento natural.</div>
+            </div>
+          </article>
+          <article class="flip-card reveal">
+            <div class="flip-inner">
+              <div class="flip-front">Lentes e facetas</div>
+              <div class="flip-back">Planejamento estético para harmonia, proporção e naturalidade.</div>
+            </div>
+          </article>
+          <article class="flip-card reveal from-right">
+            <div class="flip-inner">
+              <div class="flip-front">Atendimento humanizado</div>
+              <div class="flip-back">Uma jornada mais tranquila para pacientes que buscam conforto e confiança.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="results" id="resultados">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Resultados</p>
+          <h2>Uma área preparada para casos reais.</h2>
+          <p>
+            Quando as fotos autorizadas forem enviadas, elas entram aqui em um carrossel
+            horizontal com navegação suave.
+          </p>
+        </div>
+        <div class="result-track reveal">
+          <article>
+            <span>Resultado 01</span>
+            <strong>Antes e depois</strong>
+          </article>
+          <article>
+            <span>Resultado 02</span>
+            <strong>Reabilitação oral</strong>
+          </article>
+          <article>
+            <span>Resultado 03</span>
+            <strong>Estética dental</strong>
+          </article>
+          <article>
+            <span>Resultado 04</span>
+            <strong>Harmonização do sorriso</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contato">
+        <div class="contact-layout">
+          <div class="contact-box reveal from-left">
+            <p class="eyebrow">Agendamento VIP</p>
+            <h2>Consulta direcionada pelo WhatsApp.</h2>
+            <p>
+              O paciente informa o que procura e o site prepara uma mensagem completa para a
+              equipe iniciar o atendimento com mais contexto.
+            </p>
+            <form class="lead-form" id="leadForm">
+              <label>
+                Nome
+                <input name="name" type="text" placeholder="Seu nome" required />
+              </label>
+              <label>
+                WhatsApp
+                <input name="phone" type="tel" placeholder="(21) 99999-9999" required />
+              </label>
+              <label>
+                Interesse
+                <select name="interest" required>
+                  <option value="">Escolha um tratamento</option>
+                  <option>Implantes dentários</option>
+                  <option>Clareamento dental</option>
+                  <option>Lentes e facetas</option>
+                  <option>Periodontia</option>
+                  <option>Avaliação odontológica</option>
+                </select>
+              </label>
+              <label>
+                Melhor horário para contato
+                <select name="period" required>
+                  <option>Manhã</option>
+                  <option>Tarde</option>
+                  <option>Noite</option>
+                </select>
+              </label>
+              <button class="primary-button pulse" type="submit">Enviar para o WhatsApp</button>
+              <small>
+                Demonstração com mensagem pronta. O número oficial da clínica entra quando você enviar.
+              </small>
+            </form>
+          </div>
+          <aside class="crm-board reveal from-right">
+            <p class="eyebrow">CRM demonstrativo</p>
+            <h3>Leads captados</h3>
+            <div class="crm-empty">Nenhum lead enviado nesta navegação.</div>
+            <ul id="leadList" aria-live="polite"></ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <strong>DC Odontologia Especializada</strong>
+      <span>Site institucional premium em desenvolvimento.</span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
