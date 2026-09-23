@@ -801,14 +801,16 @@ footer {
   }
 
   .contact-rail {
-    right: 12px;
-    gap: 9px;
+    right: 7px;
+    top: 58%;
+    gap: 7px;
   }
 
   .contact-rail a {
-    width: 46px;
-    height: 46px;
-    font-size: 0.9rem;
+    width: 34px;
+    height: 34px;
+    font-size: 0.72rem;
+    box-shadow: 0 8px 18px rgba(7, 30, 23, 0.18);
   }
 
   .section-grid,
