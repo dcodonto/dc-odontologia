@@ -1,5 +1,4 @@
 const revealItems = document.querySelectorAll(".reveal");
-const counters = document.querySelectorAll("[data-count]");
 const leadForm = document.querySelector("#leadForm");
 const clinicWhatsApp = "5521998485107";
 
@@ -16,32 +15,6 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
-
-const countObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-
-      const element = entry.target;
-      const target = Number(element.dataset.count);
-      const duration = 1300;
-      const start = performance.now();
-
-      const tick = (now) => {
-        const progress = Math.min((now - start) / duration, 1);
-        const value = Math.floor(progress * target);
-        element.textContent = target === 100 ? `${value}%` : value;
-        if (progress < 1) requestAnimationFrame(tick);
-      };
-
-      requestAnimationFrame(tick);
-      countObserver.unobserve(element);
-    });
-  },
-  { threshold: 0.5 }
-);
-
-counters.forEach((counter) => countObserver.observe(counter));
 
 document.querySelector(".menu-toggle")?.addEventListener("click", () => {
   document.querySelector("#clinica")?.scrollIntoView({ behavior: "smooth" });
