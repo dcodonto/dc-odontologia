@@ -3,6 +3,8 @@ const counters = document.querySelectorAll("[data-count]");
 const leadForm = document.querySelector("#leadForm");
 const leadList = document.querySelector("#leadList");
 const crmEmpty = document.querySelector(".crm-empty");
+const tabButtons = document.querySelectorAll(".tab-button");
+const tabPanels = document.querySelectorAll(".tab-panel");
 const clinicWhatsApp = "5521998485107";
 
 const revealObserver = new IntersectionObserver(
@@ -47,6 +49,24 @@ counters.forEach((counter) => countObserver.observe(counter));
 
 document.querySelector(".menu-toggle")?.addEventListener("click", () => {
   document.querySelector("#clinica")?.scrollIntoView({ behavior: "smooth" });
+});
+
+tabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const selectedTab = button.dataset.tab;
+
+    tabButtons.forEach((tabButton) => {
+      const isActive = tabButton === button;
+      tabButton.classList.toggle("is-active", isActive);
+      tabButton.setAttribute("aria-selected", String(isActive));
+    });
+
+    tabPanels.forEach((panel) => {
+      const isActive = panel.dataset.panel === selectedTab;
+      panel.classList.toggle("is-active", isActive);
+      panel.hidden = !isActive;
+    });
+  });
 });
 
 const getLeads = () => JSON.parse(localStorage.getItem("dcLeads") || "[]");
