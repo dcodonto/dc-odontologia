@@ -562,6 +562,7 @@ section {
   display: flex;
   gap: 24px;
   width: max-content;
+  opacity: 1;
   will-change: transform;
   animation: slide 28s linear infinite;
 }
