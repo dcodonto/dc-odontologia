@@ -1002,6 +1002,44 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .contact {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .contact-layout {
+    width: 100%;
+    max-width: 100%;
+    gap: 22px;
+  }
+
+  .contact-box,
+  .crm-board {
+    width: 100%;
+    max-width: calc(100vw - 28px);
+    margin-inline: auto;
+    padding: 30px 22px;
+    border-radius: 28px;
+  }
+
+  .contact-box h2,
+  .crm-board h3 {
+    max-width: calc(100% - 44px);
+  }
+
+  .contact-box p,
+  .contact-details,
+  .lead-form,
+  .crm-empty,
+  #leadList {
+    max-width: calc(100% - 42px);
+  }
+
+  .crm-board h3 {
+    font-size: clamp(2.6rem, 14vw, 3.5rem);
+    line-height: 0.95;
+  }
+
   .collage {
     grid-template-columns: 1fr;
   }
