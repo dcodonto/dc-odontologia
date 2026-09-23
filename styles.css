@@ -519,8 +519,8 @@ section {
 
 .doctor-summary {
   display: grid;
-  gap: 8px;
-  padding: 24px;
+  gap: 6px;
+  padding: 20px 22px;
   color: var(--ivory);
 }
 
@@ -529,15 +529,15 @@ section {
   margin: 0;
   color: var(--ivory);
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.2rem, 4vw, 3rem);
-  line-height: 0.95;
+  font-size: clamp(1.72rem, 3.1vw, 2.35rem);
+  line-height: 1;
 }
 
 .doctor-summary strong,
 .doctor-back strong {
   color: var(--gold-light);
-  font-size: 0.82rem;
-  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
 }
 
@@ -546,7 +546,7 @@ section {
   height: 44px;
   display: grid;
   place-items: center;
-  margin-top: 8px;
+  margin-top: 4px;
   border: 1px solid rgba(245, 241, 232, 0.32);
   border-radius: 50%;
   color: var(--ivory);
@@ -980,11 +980,22 @@ footer {
   }
 
   .doctor-card {
-    min-height: 520px;
+    min-height: 500px;
   }
 
   .doctor-photo {
-    min-height: 330px;
+    min-height: 300px;
+  }
+
+  .doctor-summary p,
+  .doctor-back h3 {
+    font-size: clamp(1.8rem, 9vw, 2.25rem);
+  }
+
+  .doctor-summary strong,
+  .doctor-back strong {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
   }
 
   .lead-form {
