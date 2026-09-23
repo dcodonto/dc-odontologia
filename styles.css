@@ -1003,8 +1003,12 @@ footer {
   }
 
   .contact {
-    padding-left: 14px;
-    padding-right: 14px;
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 72px 10px;
+    overflow: hidden;
   }
 
   .contact-layout {
@@ -1016,15 +1020,16 @@ footer {
   .contact-box,
   .crm-board {
     width: 100%;
-    max-width: calc(100vw - 28px);
+    max-width: 100%;
     margin-inline: auto;
-    padding: 30px 22px;
+    padding: 28px 18px;
     border-radius: 28px;
+    overflow: hidden;
   }
 
   .contact-box h2,
   .crm-board h3 {
-    max-width: calc(100% - 44px);
+    max-width: 100%;
   }
 
   .contact-box p,
@@ -1032,12 +1037,33 @@ footer {
   .lead-form,
   .crm-empty,
   #leadList {
-    max-width: calc(100% - 42px);
+    max-width: 100%;
   }
 
   .crm-board h3 {
-    font-size: clamp(2.6rem, 14vw, 3.5rem);
+    font-size: clamp(2.25rem, 12vw, 3.1rem);
     line-height: 0.95;
+  }
+
+  .contact .primary-button {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .contact-rail {
+    right: 5px;
+    gap: 6px;
+  }
+
+  .contact-rail a {
+    width: 30px;
+    height: 30px;
+  }
+
+  .whatsapp::before {
+    inset: -5px;
   }
 
   .collage {
