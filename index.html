@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=15" />
+    <link rel="stylesheet" href="styles.css?v=16" />
     <link
       rel="icon"
       type="image/svg+xml"
@@ -200,90 +200,49 @@
           </p>
         </div>
 
-        <div class="treatment-tabs reveal">
-          <div class="tab-list" role="tablist" aria-label="Tratamentos da DC Odontologia">
-            <button class="tab-button is-active" type="button" role="tab" aria-selected="true" aria-controls="tab-odontopediatria" id="btn-odontopediatria" data-tab="odontopediatria">Odontopediatria</button>
-            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="tab-ortodontia" id="btn-ortodontia" data-tab="ortodontia">Ortodontia</button>
-            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="tab-estetica" id="btn-estetica" data-tab="estetica">Estética</button>
-            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="tab-harmonizacao" id="btn-harmonizacao" data-tab="harmonizacao">Harmonização</button>
-            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="tab-clinica" id="btn-clinica" data-tab="clinica-geral">Clínica geral</button>
-            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="tab-parceiros" id="btn-parceiros" data-tab="parceiros">Parceiros</button>
-          </div>
-
-          <div class="tab-panels">
-            <article class="tab-panel is-active" id="tab-odontopediatria" role="tabpanel" aria-labelledby="btn-odontopediatria" data-panel="odontopediatria">
-              <span>Atendimento e tratamentos</span>
-              <h3>Odontopediatria</h3>
-              <ul>
-                <li>Atendimento odontológico infantil</li>
-                <li>Prevenção e acompanhamento do desenvolvimento oral</li>
-              </ul>
-            </article>
-
-            <article class="tab-panel" id="tab-ortodontia" role="tabpanel" aria-labelledby="btn-ortodontia" data-panel="ortodontia" hidden>
-              <span>Atendimento e tratamentos</span>
-              <h3>Ortodontia e Ortopedia Funcional</h3>
-              <ul>
-                <li>Aparelhos ortodônticos fixos</li>
-                <li>Ortopedia funcional dos maxilares</li>
-              </ul>
-            </article>
-
-            <article class="tab-panel" id="tab-estetica" role="tabpanel" aria-labelledby="btn-estetica" data-panel="estetica" hidden>
-              <span>Atendimento e tratamentos</span>
-              <h3>Estética Odontológica</h3>
-              <ul>
-                <li>Clareamento dental</li>
-                <li>Lentes em resina</li>
-                <li>Restaurações estéticas</li>
-              </ul>
-            </article>
-
-            <article class="tab-panel" id="tab-harmonizacao" role="tabpanel" aria-labelledby="btn-harmonizacao" data-panel="harmonizacao" hidden>
-              <span>Atendimento e tratamentos</span>
-              <h3>Harmonização Orofacial</h3>
-              <ul>
-                <li>Procedimentos de harmonização orofacial</li>
-                <li>Tratamentos voltados à estética e equilíbrio facial</li>
-              </ul>
-            </article>
-
-            <article class="tab-panel" id="tab-clinica" role="tabpanel" aria-labelledby="btn-clinica" data-panel="clinica-geral" hidden>
-              <span>Atendimento e tratamentos</span>
-              <h3>Clínica Geral</h3>
-              <ul>
-                <li>Restaurações</li>
-                <li>Extrações simples</li>
-                <li>Extração de terceiros molares, os sisos</li>
-              </ul>
-            </article>
-
-            <article class="tab-panel" id="tab-parceiros" role="tabpanel" aria-labelledby="btn-parceiros" data-panel="parceiros" hidden>
-              <span>Especialidades com profissionais parceiros</span>
-              <h3>Assistência odontológica integrada</h3>
-              <p>
-                Para oferecer uma assistência odontológica integrada, a DC Odontologia
-                conta também com profissionais parceiros especializados, que atuam em
-                tratamentos específicos.
-              </p>
-              <ul>
-                <li>Implantes dentários</li>
-                <li>Periodontia</li>
-                <li>Endodontia e tratamento de canal</li>
-                <li>Próteses dentárias sobre implantes</li>
-              </ul>
-            </article>
-          </div>
-
-          <div class="treatment-note">
-            <h3>Um cuidado que vai além do procedimento</h3>
-            <p>
-              Na DC Odontologia Especializada, acreditamos que cada sorriso merece um
-              planejamento individualizado. Por isso, buscamos reunir experiência,
-              conhecimento, tecnologia e diferentes áreas da Odontologia para oferecer
-              ao paciente uma jornada de cuidado completa, segura e acolhedora.
-            </p>
-          </div>
+        <div class="service-grid">
+          <article class="flip-card reveal from-left">
+            <div class="flip-inner">
+              <div class="flip-front">Odontopediatria</div>
+              <div class="flip-back">Atendimento odontológico infantil, prevenção e acompanhamento do desenvolvimento oral.</div>
+            </div>
+          </article>
+          <article class="flip-card reveal">
+            <div class="flip-inner">
+              <div class="flip-front">Ortodontia e Ortopedia Funcional</div>
+              <div class="flip-back">Aparelhos ortodônticos fixos e ortopedia funcional dos maxilares.</div>
+            </div>
+          </article>
+          <article class="flip-card reveal from-right">
+            <div class="flip-inner">
+              <div class="flip-front">Estética Odontológica</div>
+              <div class="flip-back">Clareamento dental, lentes em resina e restaurações estéticas.</div>
+            </div>
+          </article>
+          <article class="flip-card reveal from-left">
+            <div class="flip-inner">
+              <div class="flip-front">Harmonização Orofacial</div>
+              <div class="flip-back">Procedimentos voltados à estética, harmonia e equilíbrio facial.</div>
+            </div>
+          </article>
+          <article class="flip-card reveal">
+            <div class="flip-inner">
+              <div class="flip-front">Clínica Geral</div>
+              <div class="flip-back">Restaurações, extrações simples e extração de terceiros molares, os sisos.</div>
+            </div>
+          </article>
+          <article class="flip-card reveal from-right">
+            <div class="flip-inner">
+              <div class="flip-front">Especialidades Parceiras</div>
+              <div class="flip-back">Implantes dentários, periodontia, endodontia, tratamento de canal e próteses sobre implantes.</div>
+            </div>
+          </article>
+          <article class="flip-card service-wide reveal">
+            <div class="flip-inner">
+              <div class="flip-front">Um cuidado que vai além do procedimento</div>
+              <div class="flip-back">Planejamento individualizado, tecnologia e uma jornada de cuidado completa, segura e acolhedora.</div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -396,6 +355,6 @@
       <span>Rua Getulio Vargas 121, sala 819 - Edificio Metropoles | (21) 99848-5107</span>
     </footer>
 
-    <script src="app.js?v=15"></script>
+    <script src="app.js?v=16"></script>
   </body>
 </html>
