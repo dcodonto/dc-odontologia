@@ -696,7 +696,8 @@ section {
 
 .contact-layout {
   display: grid;
-  grid-template-columns: minmax(280px, 1fr) minmax(280px, 0.66fr);
+  grid-template-columns: minmax(280px, 880px);
+  justify-content: center;
   gap: 28px;
   align-items: stretch;
 }
@@ -779,56 +780,6 @@ section {
 .lead-form small {
   color: rgba(244, 241, 233, 0.64);
   line-height: 1.6;
-}
-
-.crm-board {
-  padding: 34px;
-  border: 1px solid rgba(244, 241, 233, 0.22);
-  border-radius: 34px;
-  color: var(--ivory);
-  background: rgba(13, 40, 31, 0.76);
-  backdrop-filter: blur(14px);
-}
-
-.crm-board h3 {
-  margin: 8px 0 22px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2.7rem;
-  font-weight: 500;
-}
-
-.crm-empty {
-  padding: 18px;
-  border: 1px dashed rgba(244, 241, 233, 0.28);
-  border-radius: 18px;
-  color: rgba(244, 241, 233, 0.68);
-}
-
-#leadList {
-  display: grid;
-  gap: 14px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-#leadList li {
-  padding: 16px;
-  border-radius: 18px;
-  color: var(--forest);
-  background: var(--ivory);
-}
-
-#leadList strong {
-  display: block;
-  margin-bottom: 5px;
-}
-
-#leadList span {
-  display: block;
-  color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.5;
 }
 
 footer {
@@ -1017,8 +968,7 @@ footer {
     gap: 22px;
   }
 
-  .contact-box,
-  .crm-board {
+  .contact-box {
     width: 100%;
     max-width: 100%;
     margin-inline: auto;
@@ -1027,22 +977,14 @@ footer {
     overflow: hidden;
   }
 
-  .contact-box h2,
-  .crm-board h3 {
+  .contact-box h2 {
     max-width: 100%;
   }
 
   .contact-box p,
   .contact-details,
-  .lead-form,
-  .crm-empty,
-  #leadList {
+  .lead-form {
     max-width: 100%;
-  }
-
-  .crm-board h3 {
-    font-size: clamp(2.25rem, 12vw, 3.1rem);
-    line-height: 0.95;
   }
 
   .contact .primary-button {
