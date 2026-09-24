@@ -3,6 +3,7 @@ const leadForm = document.querySelector("#leadForm");
 const siteHeader = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const desktopNav = document.querySelector(".desktop-nav");
+const backToTop = document.querySelector(".back-to-top");
 const clinicWhatsApp = "5521998485107";
 
 const revealObserver = new IntersectionObserver(
@@ -49,6 +50,20 @@ document.addEventListener("click", (event) => {
   siteHeader.classList.remove("is-open");
   menuToggle?.setAttribute("aria-expanded", "false");
   if (menuToggle) menuToggle.textContent = "☰";
+});
+
+const toggleBackToTop = () => {
+  const showAfter = window.innerHeight * 0.5;
+  backToTop?.classList.toggle("is-visible", window.scrollY > showAfter);
+};
+
+window.addEventListener("scroll", toggleBackToTop, { passive: true });
+window.addEventListener("resize", toggleBackToTop);
+toggleBackToTop();
+
+backToTop?.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  backToTop.classList.remove("is-visible");
 });
 
 leadForm?.addEventListener("submit", (event) => {
