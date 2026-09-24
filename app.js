@@ -1,5 +1,8 @@
 const revealItems = document.querySelectorAll(".reveal");
 const leadForm = document.querySelector("#leadForm");
+const siteHeader = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
+const desktopNav = document.querySelector(".desktop-nav");
 const clinicWhatsApp = "5521998485107";
 
 const revealObserver = new IntersectionObserver(
@@ -16,8 +19,36 @@ const revealObserver = new IntersectionObserver(
 
 revealItems.forEach((item) => revealObserver.observe(item));
 
-document.querySelector(".menu-toggle")?.addEventListener("click", () => {
-  document.querySelector("#clinica")?.scrollIntoView({ behavior: "smooth" });
+menuToggle?.addEventListener("click", () => {
+  const isOpen = siteHeader?.classList.toggle("is-open") ?? false;
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.textContent = isOpen ? "×" : "☰";
+});
+
+desktopNav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    siteHeader?.classList.remove("is-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+    if (menuToggle) menuToggle.textContent = "☰";
+  });
+});
+
+desktopNav?.querySelector(".nav-dropdown button")?.addEventListener("click", () => {
+  if (window.matchMedia("(max-width: 980px)").matches) {
+    document.querySelector("#servicos")?.scrollIntoView({ behavior: "smooth" });
+    siteHeader?.classList.remove("is-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+    if (menuToggle) menuToggle.textContent = "☰";
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (!siteHeader?.classList.contains("is-open")) return;
+  if (siteHeader.contains(event.target)) return;
+
+  siteHeader.classList.remove("is-open");
+  menuToggle?.setAttribute("aria-expanded", "false");
+  if (menuToggle) menuToggle.textContent = "☰";
 });
 
 leadForm?.addEventListener("submit", (event) => {
