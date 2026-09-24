@@ -280,21 +280,37 @@ a {
   transform: translateY(-50%);
 }
 
-.contact-rail a {
+.contact-rail a,
+.contact-rail button {
   display: grid;
   place-items: center;
   width: 58px;
   height: 58px;
+  border: 0;
   border-radius: 50%;
   color: white;
   font-weight: 900;
   box-shadow: 0 14px 30px rgba(7, 30, 23, 0.25);
+  cursor: pointer;
 }
 
 .contact-rail svg {
   width: 54%;
   height: 54%;
   fill: currentColor;
+}
+
+.back-to-top {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px) scale(0.92);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
 }
 
 .orange { background: #f1662d; }
@@ -817,7 +833,8 @@ footer {
     gap: 7px;
   }
 
-  .contact-rail a {
+  .contact-rail a,
+  .contact-rail button {
     width: 34px;
     height: 34px;
     font-size: 0.72rem;
@@ -957,7 +974,8 @@ footer {
     gap: 6px;
   }
 
-  .contact-rail a {
+  .contact-rail a,
+  .contact-rail button {
     width: 30px;
     height: 30px;
   }
