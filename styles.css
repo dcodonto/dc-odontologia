@@ -13,6 +13,15 @@
   background: var(--ivory);
 }
 
+/* Cache guard: hides copy that was removed from the current HTML but may persist briefly in older mobile cache. */
+.hero-content > p:not(.eyebrow),
+.hero-actions .secondary-button,
+.intro .section-copy > p:not(.eyebrow),
+.team > .section-copy > p:not(.eyebrow),
+.contact-box > p:not(.eyebrow) {
+  display: none !important;
+}
+
 * {
   box-sizing: border-box;
 }
